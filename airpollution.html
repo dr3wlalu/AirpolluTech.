@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Air Pollution | Environmental Awareness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* logo img */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #50C878;
+}
+.logo img {
+    width: 30px; /*size*/
+    height: 30px;
+    object-fit: cover;
+    border-radius: 15px; /*roundedbox*/
+}
+    
+/* nav icon*/
+nav i {
+    margin-right: 0px;
+}
+ 
+/* body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.7;
+    color: #FFFFF0;
+}
+.container {
+    width: 88%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* airpollu (bckgrd)*/
+.air {
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("plato.jpg") center/cover no-repeat;
+    color: white;
+    padding-bottom: 120px;
+}
+
+/* nav */    
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #28282B;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.logo h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00FFFF;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    color: #00FFFF;
+}
+
+/* airpollu */    
+.air-content {
+    margin-top: 70px;
+    max-width: 750px;
+}
+.air h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #848884;
+}
+.subtitle {
+    font-size: 20px;
+}
+
+/* sections(body) */
+section {
+    padding: 70px 0;
+    font-size: 18px;
+    background: linear-gradient(to right, #2c3e40, #4ca1af);
+}
+section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #EADDCA;
+}
+
+/* overview */
+.overview-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.overview-text {
+    flex: 1;
+}
+.overview-image {
+    flex: 1;
+}
+.overview-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* cards (causes&effects) */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.card {
+    background: #8B4000;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+/* take action */  
+.ta { 
+  background: linear-gradient(to right, #2c3e50, #4ca1af); 
+  color: white; 
+  text-align: center; 
+  padding: 60px 20px; 
+}
+.ta h2 { 
+  margin-bottom: 15px; 
+  font-size: 35px;
+}
+.ta p { 
+  margin-bottom: 25px; 
+  font-size: 20px; 
+}
+.cta-img img { 
+  width: 100%; 
+  max-width: 400px; 
+  border-radius: 10px; 
+  margin-bottom: 20px; 
+}
+.ta button { 
+  padding: 14px 35px;
+  display: inline-block;
+  border: none; 
+  background: #00c853; 
+  color: white; 
+  font-size: 20px; 
+  border-radius: 30px; 
+  cursor: pointer; 
+  transition: background 0.2s;
+}
+.ta button:hover { 
+  background: #7CFC00;
+  transform: scale(1.05);
+}
+
+/* gcc */
+.climate-change {
+    padding: 80px 10%;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+    margin: 0px 0;
+}
+.climate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.climate-text {
+    flex: 1;
+}
+.climate-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.climate-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.climate-image {
+    flex: 1;
+    text-align: center;
+}
+.climate-image img {
+    width: 110%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.cta-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #00c853;
+    color: white;
+    text-decoration: none;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.cta-btn:hover {
+    background-color: #7CFC00;
+    transform: scale(1.05);
+}
+    
+/* acid,warming */
+.acid-section {
+    padding: 80px 10%;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+}
+.acid-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.acid-image {
+    flex: 1;
+    text-align: center;
+}
+.acid-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.acid-text {
+    flex: 1;
+}
+.acid-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.acid-text h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #00ffcc;
+}
+.acid-text p {
+    font-size: 16px;
+    line-height: 1.6;   
+}
+.cta-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.cta-btn:hover {
+    background-color: #7CFC00;
+    transform: scale(1.05);
+}
+    
+/*forest,water*/    
+.forest-section {
+    padding: 80px 10%;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
+}
+
+.forest-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.forest-text {
+    flex: 1;
+}
+
+.forest-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.forest-text h3 {
+    margin-top: 20px;
+    color: #00ffcc;
+}
+
+.forest-text p {
+    line-height: 1.6;
+}
+
+.forest-image {
+    flex: 1;
+    text-align: center;
+}
+
+.forest-image img {
+    width: 150%;
+    max-width: 430px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}    
+
+    
+footer {
+    background: #28282B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+    
+/* responsive */
+@media (max-width: 768px) {
+.top-nav {
+        flex-direction: column;
+        gap: 15px;
+}
+nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+}
+
+.overview-container {
+        flex-direction: column;
+}
+
+.hero h1 {
+        font-size: 40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<!-- nav -->
+<div class="top-nav">
+    <div class="container">
+        <div class="logo">
+            <img src="APT.jpg" alt="Logo">
+            AirPolluTech
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#overview"><i class="fa-solid fa-circle-info"></i> Overview</a></li>
+                <li><a href="#causes"><i class="fa-solid fa-smog"></i> Causes</a></li>
+                <li><a href="#effects"><i class="fa-solid fa-cloud"></i> Effects</a></li>
+                <li><a href="#action"><i class="fa-solid fa-hand-holding-heart"></i> Take Action</a></li>
+                <li><a href="#climate"><i class="fa-solid fa-earth-americas"></i> GCC</a></li>
+                <li><a href="#acid"><i class="fa-solid fa-cloud-rain"></i> Acid & Warming</a></li>
+                <li><a href="#forest"><i class="fa-solid fa-tree"></i> Forest & Water</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- airpollu -->
+<header class="air">
+    <div class="container air-content">
+        <h1>Air Pollution</h1>
+        <p class="subtitle">
+            Air pollution affects human health, damages ecosystems, contributes to climate change, reduces air quality, harms wildlife, and can lead to long-term environmental and economic consequences.
+        </p>
+    </div>
+</header>
+
+<!-- overview -->
+<section id="overview">
+    <div class="container">
+        <h2>Overview</h2>
+
+        <div class="overview-container">
+            <div class="overview-text">
+                <p>
+                    Air pollution occurs when harmful substances such as gases and fine particles
+                    are released into the atmosphere from transportation, industries,
+                    and energy production. It is one of the leading environmental risks globally.
+                </p>
+            </div>
+
+            <div class="overview-image">
+                <img src="overview.jpg" alt="City air pollution">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- causes -->
+<section id="causes">
+    <div class="container">
+        <h2>Main Causes</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Industrial Emissions</h3>
+                <p>Factories release pollutants from fossil fuel combustion.</p>
+                <img src="industrial.jpg" alt="Factory smoke">
+            </div>
+
+            <div class="card">
+                <h3>Transportation</h3>
+                <p>Vehicles emit harmful gases that degrade air quality.</p>
+                <img src="transpo.jpg" alt="Traffic pollution">
+            </div>
+
+            <div class="card">
+                <h3>Burning Waste</h3>
+                <p>Improper waste disposal releases toxic chemicals.</p>
+                <img src="burnwaste.jpg" alt="Burning trash">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- effects -->
+<section id="effects">
+    <div class="container">
+        <h2>Effects</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Health Risks</h3>
+                <p>Linked to asthma, lung disease, and heart problems.</p>
+                <img src="health.jpg" alt="Health impact">
+            </div>
+
+            <div class="card">
+                <h3>Climate Change</h3>
+                <p>Greenhouse gases increase global temperatures.</p>
+                <img src="climate.jpg" alt="Climate change">
+            </div>
+
+            <div class="card">
+                <h3>Environmental Damage</h3>
+                <p>Harms ecosystems, crops, and water systems.</p>
+                <img src="dmg.jpg" alt="Environmental damage">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- take action -->
+<section class="ta" id="action">
+    <h2>Take Action</h2>
+    <p>Reduce emissions, conserve energy, plant more trees, use public transport or eco-friendly vehicles, minimize waste, and raise awareness about air pollution in your community.</p>
+    <div class="cta-img">
+          <img src="action.jpg" alt="CTA Img">
+    </div>
+    <button onclick="alert('Thank you for supporting AirPolluTech!<33')">
+        Be Part of the Solution
+    </button>
+</section>
+  
+<!-- gcc -->
+<section id="climate" class="climate-change">
+    <div class="climate-container">
+        
+        <div class="climate-text">
+            <h2>Global Climate Change</h2>
+            <p>
+                Global climate change is closely connected to air pollution. 
+                Harmful gases like carbon dioxide (CO₂), methane (CH₄), and 
+                other greenhouse gases trap heat in the atmosphere, causing 
+                the Earth's temperature to rise.
+            </p>
+        <a href="#" class="cta-btn">Take Climate Action</a>
+        </div>
+
+        <div class="climate-image">
+            <img src="gcc.jpg" alt="Global Climate Change">
+        </div>
+    </div>  
+</section>
+    
+ <!-- acid,warming -->   
+<section id="acid" class="acid-section">
+    <div class="acid-container">
+        <div class="acid-image">
+            <img src="AD_GW.jpg" alt="Acid Deposition and Global Warming">
+        </div>
+
+        <div class="acid-text">
+            <h2>Acid Deposition & Global Warming</h2>
+
+            <h3>Definition</h3>
+            <p>
+                Acid deposition, commonly known as acid rain, occurs when 
+                sulfur dioxide (SO₂) and nitrogen oxides (NOₓ) mix with 
+                water vapor in the atmosphere and fall to the ground as 
+                acidic precipitation. Global warming refers to the long-term 
+                increase in Earth’s temperature due to greenhouse gases.
+            </p>
+
+            <h3>Impacts</h3>
+            <ul class="info-list">
+            <li>Damages forests, soil, and crops</li>
+            <li>Harms aquatic life in rivers and lakes</li>
+            <li>Corrodes buildings and infrastructure</li>
+            <li>Contributes to rising global temperatures</li>
+            </ul>
+
+            <h3>Solutions</h3>
+            <ul class="info-list">
+            <li>Reduce fossil fuel emissions</li>
+            <li>Promote renewable energy</li>
+            <li>Use clean transportation</li>
+            <li>Develop IT-based monitoring systems and awareness platforms</li>
+            </ul>
+            <a href="#" class="cta-btn">Learn More</a>
+        </div>
+
+    </div>  
+</section>
+    
+ <!-- forest,water -->   
+<section id="forest" class="forest-section">
+    <div class="forest-container">
+
+        <div class="forest-text">
+            <h2>Forest & Water Resources</h2>
+
+            <h3>Definition</h3>
+            <p>
+                Forest and water resources are essential natural systems 
+                that support life on Earth. Forests help regulate climate, 
+                absorb carbon dioxide, and protect biodiversity, while 
+                Water resources provide drinking water, agriculture support, 
+                and ecosystem balance.
+            </p>
+
+            <h3>Impacts</h3>
+            <ul class="info-list">
+                <li>Deforestation increases carbon emissions</li>
+                <li>Loss of biodiversity and wildlife habitat</li>
+                <li>Water pollution affects human and aquatic life</li>
+                <li>Climate change disrupts rainfall patterns</li>
+            </ul>
+
+            <h3>Solutions</h3>
+            <ul class="info-list">
+                <li>Promote reforestation and tree planting</li>
+                <li>Conserve water and reduce waste</li>
+                <li>Use sustainable agriculture practices</li>
+                <li>Develop IT-based monitoring and awareness systems</li>
+            </ul>
+
+            <a href="#" class="cta-btn">Protect Nature</a>
+        </div>
+
+        <div class="forest-image">
+            <img src="FW.jpg" alt="Forest and Water Resources">
+        </div>
+
+    </div>
+</section>    
+    
+<footer>
+    © 2026 AirPolluTech | BSIT 1B Group 1
+</footer>
+
+</body>
+</html>
